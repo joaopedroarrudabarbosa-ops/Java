@@ -1,4 +1,4 @@
-package exercicios;
+package exercicios.repeticoes;
 
 public class Continue {
     public static void main(String[]args) {

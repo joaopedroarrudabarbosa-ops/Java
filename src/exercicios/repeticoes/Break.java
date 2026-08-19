@@ -1,4 +1,4 @@
-package exercicios;
+package exercicios.repeticoes;
 
 public class Break {
     public static void main(String[]args) {

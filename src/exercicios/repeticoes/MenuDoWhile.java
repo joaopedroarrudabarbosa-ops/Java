@@ -1,4 +1,4 @@
-package exercicios;
+package exercicios.repeticoes;
 import java.util.Scanner;
 
 public class MenuDoWhile {
