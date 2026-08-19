@@ -1,3 +1,5 @@
+package exercicios;
+
 public class SistemaAcesso {
     public static void main(String[]args) {
         int idade = 20;

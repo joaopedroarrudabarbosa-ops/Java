@@ -1,3 +1,5 @@
+package fundamentos;
+
 public class OperadoresAritmeticos {
     public static void main(String[]args) {
         int numero1 = 20;
