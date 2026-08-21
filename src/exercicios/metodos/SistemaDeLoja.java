@@ -58,7 +58,7 @@ public class SistemaDeLoja {
         System.out.println("PRODUTO: " + nomeProduto + "\nPREÇO UNITÁRIO: " + precoProduto + "\nQUANTIDADE: " + quantidadeProduto + "\nSUBTOTAL: " + subtotal + "\nDESCONTO: " + desconto + "%" + "\nTOTAL: " + valorFinal);
     }
 
-    public static void main(String[]args) {
+    static void main(String[]args) {
         Scanner scanner = new Scanner(System.in);
 
         String nome = lerNome(scanner);
