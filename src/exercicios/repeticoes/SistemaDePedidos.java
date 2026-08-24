@@ -14,10 +14,10 @@ public class SistemaDePedidos{
     }
 
 
-    static void exibirResumo(int produtosValidos, double total, double media,double maiorValor, double menorValor, int remocoesValidas, double totalRemovido, double totalAtual) {
+    static void exibirResumo(int produtosValidos, double totalProdutos, double media,double maiorValor, double menorValor, int remocoesValidas, double totalRemovido, double totalAtual) {
         System.out.print("----- RESUMO DO PEDIDO -----" +
                         "\nProdutos adicionados: " +produtosValidos+
-                        "\nTotal dos produtos: " +total+
+                        "\nTotal dos produtos: " +totalProdutos+
                         "\nPreço médio: " +media+
                         "\nProduto mais caro: " +maiorValor+
                         "\nProduto mais barato: " +menorValor+
@@ -43,7 +43,7 @@ public class SistemaDePedidos{
     public static void main(String[]args) {
     Scanner input = new Scanner(System.in);
 
-    double total = 0;
+    double totalProdutos = 0;
     double totalAtual = 0;
     int opc;
     double preco;
@@ -71,7 +71,7 @@ public class SistemaDePedidos{
                         menorValor = preco;
                     }
                     media = totalAtual / produtosValidos;
-                    total += preco;
+                    totalProdutos += preco;
                     maiorValor = maiorValor(maiorValor, preco);
                     menorValor = menorValor(menorValor, preco);
                 } else {
@@ -81,10 +81,10 @@ public class SistemaDePedidos{
                 System.out.print("Digite um valor para remover do total: ");
                 remover = input.nextDouble();
                 if (remover > 0) {
-                    if (remover > total) {
+                    if (remover > totalProdutos) {
                         System.out.println("Valor maior que o total do pedido.");
                     } else {
-                        total -= remover;
+                        totalProdutos -= remover;
                         remocoesValidas++;
                         totalRemovido += remover;
                     }
@@ -92,9 +92,9 @@ public class SistemaDePedidos{
                     System.out.println("Valor inválido.");
                 }
             } else if (opc == 3) {
-                System.out.println(total);
+                System.out.println(totalProdutos);
             } else if (opc == 4) {
-                exibirResumo(produtosValidos, totalAtual, media,maiorValor,menorValor,remocoesValidas,totalRemovido,total);
+                exibirResumo(produtosValidos, totalAtual, media,maiorValor,menorValor,remocoesValidas,totalRemovido,totalProdutos);
             } else {
                 System.out.println("Opção inválida.");
             }
